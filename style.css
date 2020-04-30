@@ -35,7 +35,7 @@ main{
     font-size: 45px;
 }
 
-.button i:hover{
+.button:hover i{
     color: #ddd;
 }
 
