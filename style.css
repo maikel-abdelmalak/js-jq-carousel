@@ -11,7 +11,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(51,156,255,1);
     background: linear-gradient(45deg, rgba(51,156,255,1) 20%, rgba(36,133,244,1) 30%, rgba(3,83,219,1) 52%, rgba(1,81,218,1) 53%, rgba(28,88,191,1) 72%);
     border-top: 1px solid #0c48af;
     border-bottom: 1px solid #0c48af;
@@ -41,7 +40,6 @@ main{
 
 .img{
     width: 75%;
-    height: 500px;
     margin: auto;
 }
 
@@ -50,6 +48,7 @@ main{
     height: 100%;
     object-fit: contain;
     display: none;
+    border-radius: 5px;
 }
 
 .img .visible{
