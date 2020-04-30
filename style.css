@@ -64,3 +64,7 @@ main{
     color: #fff;
     transform: translateX(-50%);
 }
+
+.bullets i{
+    cursor: pointer;
+}

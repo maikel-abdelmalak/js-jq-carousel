@@ -73,3 +73,25 @@ $('#prev').click(function(){
     }
 
 })
+
+//rendo cliccabili i bullets, intercetto il click
+$('.bullets i').click(function(){
+//salvo in indice l'indice della posizione del bullet cliccato (this) con la funzione index
+    var indice = $(this).index();
+    console.log(indice);
+//inverto le classi al bullet pieno
+    var bullet_pieno = $('.bullets i.fas').removeClass('fas');
+    bullet_pieno.addClass('far');
+//inverto le classi al bullet cliccato
+    $(this).removeClass('far');
+    $(this).addClass('fas');
+//tolgo la classe visible all'immagine visibile al momento del click
+    var img_visibile = $('.img img.visible');
+
+    img_visibile.removeClass('visible');
+
+//aggiungo la classe visible all'immagine che ha lo stesso indice dell bullet cliccato
+    var img_click = $('.img img').eq(indice);
+
+    img_click.addClass('visible')
+})
