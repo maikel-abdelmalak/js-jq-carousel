@@ -1,3 +1,44 @@
+var play = setInterval(autoplay, 2000);
+
+function autoplay(){
+    //la funzione permette di scorrere le immagini
+    var img_corrente = $('.img img.visible');
+    var bullet_corrente = $('.bullets .fas')
+    img_corrente.removeClass('visible');
+    bullet_corrente.removeClass('fas');
+
+    bullet_corrente.addClass('far');
+    var img_successiva = img_corrente.next('img');
+
+    var bullet_successivo = bullet_corrente.next('i')
+    if(img_successiva.length == 0){
+        img_successiva = $('.img img:first-child');
+        bullet_successivo = $('.bullets i:first-child');
+        img_successiva.addClass('visible')
+
+        bullet_successivo.removeClass('far');
+
+        bullet_successivo.addClass('fas');
+    }else{
+        img_successiva.addClass('visible')
+
+        bullet_successivo.removeClass('far');
+
+        bullet_successivo.addClass('fas');
+
+    }
+}
+
+$('.play-stop button:first-child').click(function(){
+    clearInterval(play);
+
+})
+
+$('.play-stop button:last-child').click(function(){
+    play = setInterval(autoplay, 2000);
+
+})
+
 //intercetto il click su next
 $('#next').click(function(){
 //in img_corrente salvo l'immagine visibile
